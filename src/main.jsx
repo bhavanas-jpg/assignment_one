@@ -12,7 +12,7 @@ import weatherSaga from './weatherSaga.js';
 const saga = createSagaMiddleware();
 const store =configureStore({
   reducer:{
-  weather: weatherReducer,
+  weathers: weatherReducer,
   },
   middleware: [saga]
 });

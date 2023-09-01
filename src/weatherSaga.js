@@ -3,7 +3,7 @@ import { getWeatherSuccess, getWeatherFailure } from "./weatherState";
 
 function* workGetWeatherFetch() {
   try {
-    const inputText = yield select((state) => state.weather.inputValue);
+    const inputText = yield select((state) => state.weathers.inputValue);
     const weatherResponse = yield call(() =>
       fetch(
         `https://api.weatherapi.com/v1/forecast.json?key=18d6d64ca62a4b8da1260436233108&q=${inputText}`

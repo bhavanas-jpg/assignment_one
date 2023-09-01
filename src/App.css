@@ -85,3 +85,11 @@ input[type="text"]::placeholder {
   width: 20%;
   height: auto;
 }
+/* .input__container{
+    position: relative;
+}
+button{
+    position: absolute;
+    right: 18.5rem;
+    top: 0rem;
+} */
