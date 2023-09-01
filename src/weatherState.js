@@ -5,7 +5,8 @@ export const weatherForecastSlice = createSlice({
     initialState:{
         weather:{},
         isLoading: false,
-        inputValue:""
+        inputValue:"",
+        errorMessage:""
     },
     reducers:{
         getWeatherFetch:(state)=>{
@@ -15,7 +16,8 @@ export const weatherForecastSlice = createSlice({
             state.weather = action.payload;
             state.isLoading = false;
         },
-        getWeatherFailure:(state)=>{
+        getWeatherFailure:(state, action)=>{
+            state.errorMessage= action.payload;
             state.isLoading = false
         },
         getInputValue:(state, action)=>{

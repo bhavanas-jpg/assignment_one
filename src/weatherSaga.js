@@ -1,18 +1,32 @@
-import {call, put, takeEvery, select} from "redux-saga/effects";
-import { getWeatherSuccess } from "./weatherState";
+import { call, put, takeEvery, select } from "redux-saga/effects";
+import { getWeatherSuccess, getWeatherFailure } from "./weatherState";
 
+function* workGetWeatherFetch() {
+  try {
+    const inputText = yield select((state) => state.weather.inputValue);
+    const weatherResponse = yield call(() =>
+      fetch(
+        `https://api.weatherapi.com/v1/forecast.json?key=18d6d64ca62a4b8da1260436233108&q=${inputText}`
+      )
+    );
 
-function* workGetWeatherFetch(){
-    const inputText= yield select(state => state.weather.inputValue);
-    // console.log(inputText , "saga from");
-    const weather = yield call(()=> fetch(`http://api.weatherapi.com/v1/forecast.json?key=18d6d64ca62a4b8da1260436233108&q=${inputText}`));
-    const formattedWeather = yield weather.json();
-    yield put(getWeatherSuccess(formattedWeather))
+    if (!weatherResponse.ok) {
+      throw new Error("Weather API request failed");
+    }
+    const formattedWeather = yield weatherResponse.json();
+
+    yield put(getWeatherSuccess(formattedWeather));
+  } catch (error) {
+
+    yield put(getWeatherFailure(error.message))
+    console.error("An error occurred while fetching weather:", error);
+  }
 }
 
-
-function* weatherSaga(){
-    yield takeEvery('weatherForecast/getWeatherFetch', workGetWeatherFetch)
+function* weatherSaga() {
+  yield takeEvery("weatherForecast/getWeatherFetch", workGetWeatherFetch);
 }
 
 export default weatherSaga;
+
+
