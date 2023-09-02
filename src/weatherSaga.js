@@ -11,14 +11,13 @@ function* workGetWeatherFetch() {
     );
 
     if (!weatherResponse.ok) {
-      throw new Error("Weather API request failed");
+      throw new Error("Sorry, No weather data found.");
     }
     const formattedWeather = yield weatherResponse.json();
 
     yield put(getWeatherSuccess(formattedWeather));
   } catch (error) {
-
-    yield put(getWeatherFailure(error.message))
+    yield put(getWeatherFailure(error.message));
     console.error("An error occurred while fetching weather:", error);
   }
 }
@@ -28,5 +27,3 @@ function* weatherSaga() {
 }
 
 export default weatherSaga;
-
-
