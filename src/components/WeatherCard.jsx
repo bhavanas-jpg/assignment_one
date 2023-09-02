@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { MdOutlineLocationOn } from "react-icons/md";
+import loadingImage from "../assets/loading.gif";
 
 const WeatherCard = () => {
   const { weather, isLoading, errorMessage } = useSelector(
@@ -18,7 +19,7 @@ const WeatherCard = () => {
         <div className="loading__content">
           <h2>Loading....</h2>
           <img
-            src="https://cdn.dribbble.com/users/372537/screenshots/2065624/icons_km_weather.gif"
+            src={loadingImage}
             width="200"
             height="200"
           />

@@ -6,14 +6,12 @@ import WeatherCard from "./components/WeatherCard";
 function App() {
   return (
     <>
-    <div className="container__content">
-
-    </div>
-    <main className="container">
-      <Header />
-     <SearchBar />
-     <WeatherCard />    
-    </main>
+      <div className="container__content"></div>
+      <main className="container">
+        <Header />
+        <SearchBar />
+        <WeatherCard />
+      </main>
     </>
   );
 }
