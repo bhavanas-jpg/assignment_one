@@ -18,11 +18,7 @@ const WeatherCard = () => {
       {isLoading ? (
         <div className="loading__content">
           <h2>Loading....</h2>
-          <img
-            src={loadingImage}
-            width="200"
-            height="200"
-          />
+          <img src={loadingImage} width="200" height="200" />
         </div>
       ) : errorMessage.length === 0 ? (
         name?.length !== 0 && (

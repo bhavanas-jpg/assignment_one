@@ -184,4 +184,10 @@ button:disabled {
   .logo {
     font-size: 16px;
   }
+  .text__input {
+    width: 100%;
+  }
+  .input__container {
+    width: 100%;
+  }
 }
