@@ -5,7 +5,7 @@ import {
   getInputValue,
   getWeatherFailure,
   getWeatherSuccess,
-} from "../weatherState";
+} from "../redux/weatherState";
 import { FaSearch } from "react-icons/fa";
 
 const SearchBar = () => {

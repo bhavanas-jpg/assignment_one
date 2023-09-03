@@ -5,8 +5,8 @@ import './index.css';
 import {Provider} from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import {configureStore} from "@reduxjs/toolkit";
-import weatherReducer from "./weatherState.js";
-import weatherSaga from './weatherSaga.js';
+import weatherReducer from "./redux/weatherState.js";
+import weatherSaga from './redux/weatherSaga.js';
 
 // Create a Saga middleware instance.
 const saga = createSagaMiddleware();
