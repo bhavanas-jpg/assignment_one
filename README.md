@@ -3,7 +3,7 @@
 [WeatherPulse](https://weatherforecast-v1.netlify.app/) -  Your Weather Companion in Every Pulse
 
 <div align="center">
-  <img src="https://res.cloudinary.com/drjisfpis/image/upload/v1688354920/cover_mnf4a7.png" height="auto" width="100%" alt="logo"/>
+  <img src="https://res.cloudinary.com/drjisfpis/image/upload/v1693756863/weather_pulse_ss_gwzteh.png" height="auto" width="100%" alt="logo"/>
 </div>
 
 ## How to install and run locally?
