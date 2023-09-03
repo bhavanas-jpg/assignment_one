@@ -1,8 +1,37 @@
-# React + Vite
+# WeatherPulse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[WeatherPulse](https://weatherforecast-v1.netlify.app/) -  Your Weather Companion in Every Pulse
 
-Currently, two official plugins are available:
+<div align="center">
+  <img src="https://res.cloudinary.com/drjisfpis/image/upload/v1688354920/cover_mnf4a7.png" height="auto" width="100%" alt="logo"/>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to install and run locally?
+
+```
+$ git clone https://github.com/bhavanas-jpg/assignment_one.git
+$ cd weather-forecast
+$ npm install
+$ npm run dev
+```
+<hr/>
+
+## Features-
+
+- Search weather of any location all over globe
+- Shows humidity, temperature and conditions of weather
+
+<hr/>
+
+## Built with -
+
+- React JS
+- Redux Toolkit
+- Redux Saga
+- Vanilla CSS
+
+<hr/>
+
+## **Contact -**
+
+For any inquiries or feedback, please email at s148bhavana@gmail.com

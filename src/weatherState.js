@@ -20,7 +20,6 @@ export const weatherForecastSlice = createSlice({
       state.errorMessage = action.payload;
       state.isLoading = false;
     },
-
     getInputValue: (state, action) => {
       state.inputValue = action.payload;
     },
