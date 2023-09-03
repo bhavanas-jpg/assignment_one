@@ -1,13 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//created slice
 export const weatherForecastSlice = createSlice({
   name: "weatherForecast",
+  // initial state
   initialState: {
     weather: {},
     isLoading: false,
     inputValue: "",
     errorMessage: "",
   },
+  // reducer
   reducers: {
     getWeatherFetch: (state) => {
       state.isLoading = true;
@@ -32,4 +35,5 @@ export const {
   getWeatherFailure,
   getInputValue,
 } = weatherForecastSlice.actions;
+
 export default weatherForecastSlice.reducer;
