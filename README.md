@@ -20,6 +20,8 @@ $ npm run dev
 
 - Search weather of any location all over globe
 - Shows humidity, temperature and conditions of weather
+- Fully responsive
+- It shows current location weather by default
 
 <hr/>
 
